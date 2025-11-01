@@ -7,28 +7,28 @@
 
 int main()
 {
-    int inpnum, orNum, remainder, n = 0;
+    int num, ogNum, remainder, n = 0;
     float result = 0.0;
     printf("Enter an integer: ");
-    scanf("%d", &inpnum);
-    orNum = inpnum;
+    scanf("%d", &num);
+    ogNum = num;
 
-    for (orNum = inpnum; orNum != 0; ++n)
+    for (ogNum = num; ogNum != 0; ++n)
     {
-        orNum /= 10;
+        ogNum /= 10;
     }
-    orNum = inpnum;
+    ogNum = num;
 
-    for (orNum = inpnum; orNum != 0; orNum /= 10)
+    for (ogNum = num; ogNum != 0; ogNum /= 10)
     {
-        remainder = orNum % 10;
+        remainder = ogNum % 10;
         result += pow(remainder, n);
     }
 
-    if ((int)result == inpnum)
-        printf("%d is Armstrong number.", inpnum);
+    if ((int)result == num)
+        printf("%d is Armstrong number.", num);
     else
-        printf("%d is not Armstrong number.", inpnum);
+        printf("%d is not Armstrong number.", num);
 
     return 0;
 }
